@@ -2,6 +2,13 @@
 
 ## Setup
 
+```bash
+ $ git clone git@github.com:ga-wdi-exercises/react-redux-counter.git
+ $ cd react-redux-counter/counter
+ $ npm install
+ $ npm start
+```
+
 ## Using .disptach
 
 ## Using .subscribe
