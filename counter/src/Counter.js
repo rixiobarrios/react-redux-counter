@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class Counter extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         {"Starter code provided. Please start in App.js"}
       </div>
     );
   }
 }
 
-export default App;
+export default Counter;
