@@ -2,7 +2,6 @@
 
 ## Setup
 
-
 ## Using .disptach
 
 ## Using .subscribe
