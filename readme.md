@@ -63,7 +63,7 @@ The extreme simplicity of this app allows us to see how redux operates on a basi
  $ touch src/reducers/CounterReducer.js
 ```
 
-> in `src/reducers.js`:
+> in `src/reducers/CounterReducer.js`:
 
 ```js
 export default (state = 0, action) => {
