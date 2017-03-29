@@ -4,7 +4,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        {"Starter code provided. Please start in App.js"}
+        {"Starter code provided. Please start in Counter.js"}
       </div>
     );
   }
