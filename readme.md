@@ -3,7 +3,7 @@
 ## Setup
 
 ```bash
- $ git clone git@github.com:ga-wdi-exercises/react-redux-counter.git
+ $ git clone git@generalassmb.ly:ga-wdi-exercises/react-redux-counter.git
  $ cd react-redux-counter/counter
  $ npm install
  $ atom .
