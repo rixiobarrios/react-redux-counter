@@ -13,7 +13,7 @@ If you don't use Atom, substitute the 4th command for your preferred text editor
 
 ## Building the Counter Component
 
-Our Counter component will not have a `state` in the likes that we have seen so far.  It is just going to display a single value that it will receive as `props`. It will be purely a display component; these are sometimes referred to as dumb components or as functional components.
+Our Counter component will not have a `state` in the likes that we have seen so far.  It is just going to display a single value that it will receive as `props`. It will be purely a display component; these are sometimes referred to as presentational components, dumb components, or functional components.
 
 We're going to convert counter from being a class component to a functional component.
 
@@ -57,6 +57,8 @@ An `action` in Redux is actually a *description of a change*, rather than the ch
 In this example we're going to use a number for our state. This is because our app is very simple so far.  
 The simplicity of this app allows us to see how redux operates on a basic level.  When our apps become more complex, we will use objects or arrays to express our state.
 
+We're going to add a file for a `reducer`.  Reducers are pure functions that always take in `state` and `action` as arguments and return a new state.  Remember not to mutate state!
+
 ```bash
  $ mkdir src/reducers
  $ touch src/reducers/CounterReducer.js
@@ -99,7 +101,7 @@ The switch statement ends up lining up better than its `if else` counterpart, an
 
 Containers are components that contain business logic, doing more than just displaying something.  They often serve to pass down data and functionality to presentation components.  
 We're not going to introduce a separate container component, but we're going to treat `index.js` as our container.
-This practice is far from ideal, but in the next exercise (shopping cart), we will observe React conventions more faithfully.
+This practice is not ideal, but in upcoming exercises we will observe React conventions more faithfully.
 
 Let's finally install redux in our project!
 
@@ -181,3 +183,5 @@ Try to implement a few of these other features in your Counter app using the Red
 - A button that ***resets*** counter to zero
 - A button that ***squares*** the current number.
 - Buttons that ***increase/decrease by 10***
+- Button that ***flips the sign*** of the number from positive to negative and vice versa.  
+- CSS that makes your app go pop!
