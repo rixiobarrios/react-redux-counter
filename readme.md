@@ -101,7 +101,7 @@ The switch statement ends up lining up better than its `if else` counterpart, an
 
 Containers are components that contain business logic, doing more than just displaying something.  They often serve to pass down data and functionality to presentation components.  
 We're not going to introduce a separate container component, but we're going to treat `index.js` as our container.
-This practice is far from ideal, but in the next exercise (shopping cart), we will observe React conventions more faithfully.
+This practice is not ideal, but in upcoming exercises we will observe React conventions more faithfully.
 
 Let's finally install redux in our project!
 
