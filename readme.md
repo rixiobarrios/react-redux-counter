@@ -181,5 +181,3 @@ Try to implement a few of these other features in your Counter app using the Red
 - A button that ***resets*** counter to zero
 - A button that ***squares*** the current number.
 - Buttons that ***increase/decrease by 10***
-- Buttons that ***increase/decrease by custom amount*** read from an input field on the page.  
-> Note: to truly implement this last bonus in proper redux fashion, you will need to change how state is stored, from a number to an object.  This object would hold the current amount as well as the amount to increase/decrease by.  To begin with, you can just read the value of the input field from the DOM.  Once you get that working, try to store the custom rate as part of state.  
