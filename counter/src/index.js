@@ -6,7 +6,10 @@ import Counter from './Counter'
 import counterReducer from './reducers/CounterReducer'
 import './index.css'
 
-const store = createStore(counterReducer)
+const store = createStore(
+  counterReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 // testing
 // store.subscribe(() => console.log(store.getState()))
