@@ -13,7 +13,7 @@ If you don't use Atom, substitute the 4th command for your preferred text editor
 
 ## Building the Counter Component
 
-Our Counter component will not have a `state` in the likes that we have seen so far.  It is just going to display a single value that it will receive as `props`. It will be purely a display component; these are sometimes referred to as dumb components or as functional components.
+Our Counter component will not have a `state` in the likes that we have seen so far.  It is just going to display a single value that it will receive as `props`. It will be purely a display component; these are sometimes referred to as presentational components, dumb components, or functional components.
 
 We're going to convert counter from being a class component to a functional component.
 
@@ -56,6 +56,8 @@ An `action` in Redux is actually a *description of a change*, rather than the ch
 
 In this example we're going to use a number for our state. This is because our app is very simple so far.  
 The simplicity of this app allows us to see how redux operates on a basic level.  When our apps become more complex, we will use objects or arrays to express our state.
+
+We're going to add a file for our `reducer`.  Reducers are pure functions that always take in state and action as arguments and return a new state.  Remember not to mutate state!
 
 ```bash
  $ mkdir src/reducers
@@ -181,5 +183,3 @@ Try to implement a few of these other features in your Counter app using the Red
 - A button that ***resets*** counter to zero
 - A button that ***squares*** the current number.
 - Buttons that ***increase/decrease by 10***
-- Buttons that ***increase/decrease by custom amount*** read from an input field on the page.  
-> Note: to truly implement this last bonus in proper redux fashion, you will need to change how state is stored, from a number to an object.  This object would hold the current amount as well as the amount to increase/decrease by.  To begin with, you can just read the value of the input field from the DOM.  Once you get that working, try to store the custom rate as part of state.  
