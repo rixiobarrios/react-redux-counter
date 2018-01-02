@@ -183,3 +183,5 @@ Try to implement a few of these other features in your Counter app using the Red
 - A button that ***resets*** counter to zero
 - A button that ***squares*** the current number.
 - Buttons that ***increase/decrease by 10***
+- Button that ***flips the sign*** of the number from positive to negative and vice versa.  
+- CSS that makes your app go pop!
