@@ -57,7 +57,7 @@ An `action` in Redux is actually a *description of a change*, rather than the ch
 In this example we're going to use a number for our state. This is because our app is very simple so far.  
 The simplicity of this app allows us to see how redux operates on a basic level.  When our apps become more complex, we will use objects or arrays to express our state.
 
-We're going to add a file for our `reducer`.  Reducers are pure functions that always take in state and action as arguments and return a new state.  Remember not to mutate state!
+We're going to add a file for a `reducer`.  Reducers are pure functions that always take in `state` and `action` as arguments and return a new state.  Remember not to mutate state!
 
 ```bash
  $ mkdir src/reducers
