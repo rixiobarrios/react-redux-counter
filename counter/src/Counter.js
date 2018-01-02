@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class Counter extends Component {
+const Counter = (props) => {
+  let quantity = 0
   render() {
     return (
       <div>
-        {"Starter code provided. Please start in Counter.js"}
+        Quantity: {quantity}
+        <button>+</button>
+        <button>-</button>
       </div>
-    );
+    )
   }
 }
 
-export default Counter;
+export default Counter
