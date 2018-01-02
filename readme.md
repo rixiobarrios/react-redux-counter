@@ -13,7 +13,7 @@ If you don't use Atom, substitute the 4th command for your preferred text editor
 
 ## Building the Counter Component
 
-Our Counter component will not have a `state` in the like that we have seen so far.  and is just going to display a single value that it will receive as `props`. It will be purely a display component; these are sometimes referred to as dumb components or as functional components.
+Our Counter component will not have a `state` in the likes that we have seen so far.  It is just going to display a single value that it will receive as `props`. It will be purely a display component; these are sometimes referred to as dumb components or as functional components.
 
 We're going to convert counter from being a class component to a functional component.
 
@@ -21,7 +21,7 @@ A functional component is a component this is defined with a ***function*** inst
 As you might guess, a class component is a component defined by a ***class***.
 
 If a component will be **stateless**, React guidelines recommend using a ***functional component***.
-If the component will have a *`state`*, it should be defined by a ***class***.
+If the component will have a **state**, it should be defined by a ***class***.
 
 
 > in `src/Counter.js`:
@@ -43,20 +43,19 @@ const Counter = (props) => {
 export default Counter;
 ```
 
-In this case, our Counter component is just going to display a single value that it receives as `props`, and also receive two functions which will trigger `actions` in the `store`, via the `reducer`.
+Our Counter component is going to display a single value that it receives through `props`.  Counter will also receive two functions through `props` which will trigger `actions` in the `store`, via the `reducer`.
 
-For now the value of `quantity` is defined in a variable local to the component. We're kind of faking local state here with `let quantity = 0`. We're going to replace the placeholder `0` with `this.props.quantity`, once we set up this component to retrieve `props` from the `store`.
+For now the value of `quantity` is defined in a variable local to the component.  We're kind of faking local state here with `let quantity = 0`. We're going to replace the placeholder `0` with `this.props.quantity`, once we set up this component to retrieve `props` from the `store`.
 
 ## Adding Reducers
 
 Reducers essentially 'decide' which action to apply to a state.
-Reducers take the form of pure functions, and take two arguments: an action and a state.
+Reducers take the form of pure functions, and take two arguments: an ***action*** and a ***state***.
 
-An `action` in Redux is actually a description of a type of change, rather than the change itself. Almost always, an action will be a plain, Javascript object.
+An `action` in Redux is actually a *description of a change*, rather than the change itself.  An action will be a plain Javascript object.
 
-In this example we're going to use a number as the state. The reason for this is that our app is ridiculously simple so far.
-
-The extreme simplicity of this app allows us to see how redux operates on a basic level. When we build a shopping cart in the next exercise, we will use plain Javascript objects for our actions.
+In this example we're going to use a number for our state. This is because our app is very simple so far.  
+The simplicity of this app allows us to see how redux operates on a basic level.  When our apps become more complex, we will use objects or arrays to express our state.
 
 ```bash
  $ mkdir src/reducers
@@ -78,8 +77,8 @@ export default (state = 0, action) => {
 }
 ```
 
-Switch statements are ideal for checking for **multiple possible values** of ***a single variable or reference***.
-They are favored over if-else conditional blocks because they read more cleanly, and almost always involve fewer keystrokes (`freeTime++`).
+Switch statements are ideal for checking **multiple possible values** of ***a single variable or reference***.
+They are favored over `if-else` conditional blocks in redux because they read more cleanly, and usually involve fewer keystrokes (`freeTime++`).
 Using `switch` spares us from having to write something this, which is functionally identical to the above:
 
 ```js
@@ -93,15 +92,12 @@ if (action.type === "INCREMENT") {
 }
 ```  
 
-The switch statement ends up lining up better than its if-else counterpart, and is more uniform in its display.
-We don't have to specify the same value over and over again in `else if` statements.
-It also has fewer symbols and takes less effort to type.
-This seems like a win across the board, though they might feel strange at first if you aren't used to writing them.
+The switch statement ends up lining up better than its `if-else` counterpart, and is more uniform in its display.  We don't have to specify the same value over and over again like we do in `else if` statements.
 
 
 ## The Container
 
-Containers are components that contain business logic, doing more than just displaying something.
+Containers are components that contain business logic, doing more than just displaying something.  They often serve to pass down data and functionality to presentation components.  
 We're not going to introduce a separate container component, but we're going to treat `index.js` as our container.
 This practice is far from ideal, but in the next exercise (shopping cart), we will observe React conventions more faithfully.
 
@@ -126,8 +122,7 @@ import counterReducer from './reducers/CounterReducer'
 import './index.css'
 
 const store = createStore(
-  counterReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  counterReducer
 )
 
 // We have to wrap ReactDOM.render in a callback to pass to store.subscribe()
